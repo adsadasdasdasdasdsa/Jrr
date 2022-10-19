@@ -46,7 +46,7 @@ client2.on("messageCreate", message => {
     let game = games[Math.floor(Math.random() * games.length)]
         let em = new MessageEmbed() .setTitle(`Its Now Play: ${game}`) 
           .setColor("RANDOM") 
-          .setFooter(`Requred By : ${message.author.tag}`)
+          .setFooter(`Requred By : ss${message.author.tag}`)
     .setTimestamp()
     message.channel.send({embeds:[em]})
     
