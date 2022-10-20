@@ -52,7 +52,13 @@ client2.on("messageCreate", message => {
     
   }
 })
-client.on(`messageCreate`, message => {
+client.on("guildMemberAdd", member => {
+  if(member){
+    var channel = client.channels.cache.find('name','welcome');
+    channel.send(`${member} is join`)
+  }
+  })
+/*client.on(`messageCreate`, message => {
   let member = message.member
 
 if(member.send){
@@ -109,6 +115,4 @@ if(member.send){
 }
 
 }) 
-client.on("guildMemberAdd", member => {
-member.send(`welcome server`)
-})
+*/
