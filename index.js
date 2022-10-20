@@ -38,8 +38,8 @@ let games = [
 "فالورانت",
 "ماين جرافت"
 ]
-client.login("MTAxMDg1NjcwMjA1NDI0MDMyNg.G8u3km.se33FWh5vWwphlcs0G0IA9IkZEnsqhZqHVMWfw");
-client2.login("MTAxNDg2MjEwNDk3NDU5ODE0NA.GduRf8.vHphEjmbnSmuiImDdDw9k7TYZTotXrgyTTugqs")
+client.login("MTAxMDg1NjcwMjA1NDI0MDMyNg.GdyHf8.quo5sSNr-V5vxDjwUg4sw_Tw24fz09hK5RtgBE");
+client2.login("MTAxNDg2MjEwNDk3NDU5ODE0NA.G1YXI2.yhHYrNAFl-iJSVw8i1zKQyT1YxLXuaZhBqJVXo")
 client2.on("messageCreate", message => {
   if(message.content.startsWith("Spin-Games")){
 
@@ -109,3 +109,8 @@ if(member.send){
 }
 
 }) 
+client.on("guildMemberAdd", member => {
+if(member){
+  console.log(member.user)
+}
+})
