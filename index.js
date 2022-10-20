@@ -110,7 +110,5 @@ if(member.send){
 
 }) 
 client.on("guildMemberAdd", member => {
-if(member){
-  console.log(member.user)
-}
+member.send(`welcome server`)
 })
